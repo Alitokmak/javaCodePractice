@@ -11,7 +11,7 @@ package InterviewQuestions;
         */
 public class Permutasyon {
     public static void main(String[] args) {
-        String str="abcd";
+        String str="abc";
         Permutasyon((str));
     }
     public static int Permutasyon(String str){
