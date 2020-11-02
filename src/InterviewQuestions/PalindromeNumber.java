@@ -7,14 +7,12 @@ public class PalindromeNumber {
 
     }
 
-    public static boolean isPalindrome(long num) {
-        long remain =num;
-        long rev =0;
-        long digit=0;
-        while(remain !=0) {
-            digit =remain %10;
-            rev = rev*10 +digit;
-            remain /=10;
+    public static boolean isPalindrome(int num) {
+        int temp=num;
+        int rev = 0;
+        while(temp!=0){
+            rev= rev*10+temp%10;
+            temp/=10;
         }
         return num==rev;
     }

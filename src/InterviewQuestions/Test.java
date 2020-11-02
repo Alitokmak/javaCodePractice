@@ -4,21 +4,25 @@ import java.util.*;
 
 public class Test {
     public static void main(String[] args) {
-        int num=153;
-        System.out.println(Armstrong(num));
+        String str="aaabbcdee";
+        System.out.println(Unique(str));
     }
-    public static boolean Armstrong(int num){
-        int temp=num;
-        int a=0;
-        int b=0;
-        while(num>0){
-            a=num%10;
-            num=num/10;
-            b=b+(a*a*a);
+    public static String Unique(String str){
+        String result="";
+        for(int i=0; i<str.length(); i++){
+            int count=0;
+            for(int j=0; j<str.length(); j++){
+                if(str.charAt(i)==str.charAt(j)){
+                    count++;
+                }
+            }
+            if(count==1){
+                result+=str.charAt(i);
+            }
         }
-        if(temp==b){
-            return true;
-        }
-        return false;
+        return result;
     }
 }
+
+
+
